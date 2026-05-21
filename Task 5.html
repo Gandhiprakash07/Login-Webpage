@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+
+            background: linear-gradient(
+                270deg,
+                red,
+                green,
+                blue,
+                yellow,
+                cyan,
+                magenta,
+                orange,
+                purple,
+                pink,
+                red,
+                silver,
+                gold,
+                teal,
+                navy,
+                maroon,
+                lime,
+                olive,
+                gray,
+                white
+
+            );
+
+            background-size: 600% 600%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        th,
+        td {
+            border: 7px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 100px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Action</th>
+                <th>Score</th>
+                <th>links</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Gandhi Prakash R</td>
+                <td>21</td>
+                <td>Trichy, India</td>
+                <td>Turn</td>
+                <td>100/10</td>
+                <td><a href="https://www.linkedin.com/in/gandhi-prakash-r-0b1b0b1b0/" target="_blank">LinkedIn</a></td>
+            </tr>
+                <tr>
+                    <td>Gokul barath C K</td>
+                    <td>19</td>
+                    <td>Trichy, India</td>
+                    <td>Hacker</td>
+                    <td>100/10</td>
+                    <td><a href="https://www.linkedin.com/in/gokul-barath-c-k-0b1b0b1b0/" target="_blank">LinkedIn</a></td>
+                </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--TITLE-->
+  <title>Google Style Page</title>
+
+  <style>
+    body{
+      margin:0; /* Gap */
+      height:100vh;  /* Full Screen */
+      display:flex; /* Easy alignment */
+      justify-content:center; /* Center the contents */
+      align-items:center; /* Center the Left and right */
+      flex-direction:column; /* Top to bottom Arrangement */
+      font-family:Arial; /* font */
+      overflow:hidden; /* Hide Scrollbar */
+    }
+
+    video{
+      position:fixed; /* Fixed Position */
+      width:100%; /* Full Width cover */
+      height:100%; /* Full Height cover */
+      object-fit:cover; /* Cover the entire area */
+      z-index:-1;   /* video go to background */
+    }
+
+    h1{
+      font-size:70px;
+      color:white;
+      background:linear-gradient(to right, red, yellow, cyan, pink);
+      -webkit-background-clip: text; /* only for test */
+      background-clip: text; /* standard property for compatibility */
+      -webkit-text-fill-color:transparent; /* Hide white color */
+    }
+
+    .search{
+      width:400px;
+      padding:15px; /* inside space */
+      border:none; /* Remove default border */
+      border-radius:30px; /* Rounded corners */
+      font-size:18px; /* font size */
+      outline:none; /* Remove outline on focus */
+      background:rgba(219, 139, 139, 0.2); 
+      color:white;
+      backdrop-filter:blur(5px); /* Blur effect */
+    }
+
+    button{
+      margin-top:20px; /* search box mela gap */
+      padding:12px 25px; /* inside space */
+      border:none; /* rounded button */
+      border-radius:25px; /* Rounded corners */
+      font-size:18px; /* font size */
+      color:white;
+      background:linear-gradient(to right, blue, purple, pink);
+      cursor:pointer; /* for pointer symbol */
+    }
+
+    button:hover{
+      transform:scale(1.1); /* when we touch button it will zoom in */
+    }
+  </style>
+</head>
+
+<body>
+
+    <a href="https://google.com">Original Google</a><br>
+    <a href="https://linkedin.com"> LinkedIn</a><br>    
+    <a href="https://youtube.com"> YouTube</a><br>
+
+  <video autoplay muted loop> 
+    <source src="Video2.mp4" type="video/mp4"> 
+  </video>
+  <audio autoplay loop>
+    <source src="music.mp3.mpeg" type="audio/mpeg">
+    </audio>
+  <h1>Demo Google</h1>
+
+  <!-- Search Form -->
+  <form action="https://www.google.com/search" method="GET" target="_blank"> 
+    <input 
+      type="text" 
+      class="search" 
+      name="q"
+      placeholder="Search Here...">
+
+    <br>
+    <center>
+
+    <button type="submit">Search</button>
+    </center>
+
+  </form>
+
+</body>
+</html>

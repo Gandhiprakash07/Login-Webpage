@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            /* Gradient Background */
+            background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .form-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+            color: white;
+            width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            background: rgba(255,255,255,0.8);
+        }
+
+        button {
+            background: #4a1884;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: black;
+        }
+
+        .gender {
+            margin: 10px 0;
+        }
+
+        .gender input {
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <center>
+            <h2>Contact Me</h2>
+
+            <form action="file:///D:/For%20Test/task 5.html">
+
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name"
+                    placeholder="Enter your name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email"
+                    placeholder="Enter your email" required><br><br>
+
+                <label>Phone:</label><br>
+                <input type="tel" name="phone"
+                    placeholder="Enter phone number"><br><br>
+
+                <!-- Gender Selection -->
+                <div class="gender">
+                    <label>Gender:</label><br><br>
+
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div><br>
+
+                <select name="subject">
+                    <option value="">-- Select Subject --</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="ethical">Ethical Hacking</option>
+                    <option value="redteam">Red Teamer</option>
+                </select><br><br>
+
+                <textarea rows="4"
+                    placeholder="Your message"></textarea><br><br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button><br><br>
+
+                <input type="checkbox" id="newsletter"
+                    name="newsletter">
+                <label for="newsletter">
+                    Subscribe to newsletter
+                </label>
+
+            </form>
+        </center>
+
+    </div>
+
+</body>
+</html>

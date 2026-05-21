@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Style Page</title>
+
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      font-family:Arial;
+      overflow:hidden;
+    }
+
+    video{
+      position:fixed;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:-1;
+    }
+
+    h1{
+      font-size:70px;
+      background:linear-gradient(to right, gold, silver, cyan, red);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .search{
+      width:400px;
+      padding:15px;
+      border:none;
+      border-radius:30px;
+      font-size:18px;
+      outline:none;
+      background:rgba(255,255,255,0.2);
+      color:white;
+      backdrop-filter:blur(5px);
+    }
+
+    button{
+      margin-top:20px;
+      padding:12px 25px;
+      border:none;
+      border-radius:25px;
+      font-size:18px;
+      color:white;
+      background:linear-gradient(to right, rgb(116, 16, 54), rgb(6, 10, 91), rgb(159, 195, 39));
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.1);
+    }
+
+    a{
+      color:white;
+      text-decoration:none;
+      margin:5px;
+      font-size:18px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop>
+    <source src="j.mp4.mp4" type="video/mp4">
+  </video>
+
+  <!-- Audio -->
+  <audio id="bgmusic" loop>
+    <source src="music.mp3.mpeg" type="audio/mpeg">
+  </audio>
+
+  <h1>Google</h1>
+
+  <!-- Search Form -->
+  <form action="https://www.google.com/search" method="GET" target="_blank">
+
+    <input
+      type="text"
+      class="search"
+      name="q"
+      placeholder="Search Here..."
+      onkeydown="playMusic()">
+
+    <br><br>
+
+    <center>
+      <button type="submit">Search</button>
+    </center>
+
+  </form>
+
+  <script>
+    function playMusic(){
+      let music = document.getElementById("bgmusic");
+
+      // Play only once
+      if(music.paused){
+        music.play();
+      }
+    }
+  </script>
+
+</body>
+</html>

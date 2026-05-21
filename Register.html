@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>High Tech Register Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+            height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            overflow:hidden;
+            background:#000;
+        }
+
+        /* Background Video */
+
+        .bg-video{
+            position:fixed;
+            top:0;
+            left:0;
+
+            width:100%;
+            height:100%;
+
+            object-fit:cover;
+
+            z-index:-2;
+        }
+
+        /* Overlay */
+
+        .overlay{
+            position:fixed;
+            top:0;
+            left:0;
+
+            width:100%;
+            height:100%;
+
+            background:rgba(0,0,0,0.6);
+
+            z-index:-1;
+        }
+
+        /* Register Box */
+
+        .register-box{
+
+            width:420px;
+            padding:40px;
+
+            border-radius:25px;
+
+            background:rgba(255,255,255,0.08);
+
+            border:1px solid rgba(255,255,255,0.2);
+
+            backdrop-filter:blur(15px);
+
+            text-align:center;
+
+            box-shadow:
+            0 0 20px rgba(0,255,255,0.3),
+            0 0 40px rgba(0,255,255,0.2);
+
+            animation:glow 3s infinite alternate;
+        }
+
+        @keyframes glow{
+
+            from{
+                box-shadow:
+                0 0 20px rgb(203, 37, 81),
+                0 0 40px rgb(211, 20, 30);
+            }
+
+            to{
+                box-shadow:
+                0 0 30px #c6426e,
+                0 0 60px #cc434f;
+            }
+        }
+
+        .register-box h1{
+
+            color:white;
+
+            font-size:40px;
+
+            margin-bottom:30px;
+
+            letter-spacing:3px;
+
+            text-shadow:
+            0 0 10px rgb(182, 51, 75),
+            0 0 20px rgb(200, 61, 80);
+        }
+
+        /* Input Fields */
+
+        .input-box{
+            margin-bottom:20px;
+        }
+
+        .input-box input{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            outline:none;
+
+            border-radius:12px;
+
+            background:rgba(255,255,255,0.08);
+
+            border:1px solid rgba(255,255,255,0.2);
+
+            color:white;
+
+            font-size:16px;
+
+            transition:0.4s;
+        }
+
+        .input-box input:focus{
+
+            border-color:rgb(168, 39, 39);
+
+            box-shadow:
+            0 0 10px rgb(219, 47, 81),
+            0 0 20px rgb(179, 30, 90);
+        }
+
+        .input-box input::placeholder{
+            color:#ddd;
+        }
+
+        /* Register Button */
+
+        .btn{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:linear-gradient(45deg, rgb(206, 59, 103), #c02929);
+
+            color:black;
+
+            font-size:18px;
+
+            font-weight:600;
+
+            cursor:pointer;
+
+            transition:0.4s;
+        }
+
+        .btn:hover{
+
+            transform:scale(1.05);
+
+            box-shadow:
+            0 0 15px rgb(220, 44, 76),
+            0 0 30px rgb(208, 30, 90),
+            0 0 60px rgb(182, 16, 24);
+        }
+
+        /* Login Link */
+
+        .login-link{
+
+            margin-top:20px;
+
+            color:white;
+
+            font-size:15px;
+        }
+
+        .login-link a{
+
+            color:rgb(207, 55, 86);
+
+            text-decoration:none;
+
+            font-weight:600;
+
+            transition:0.3s;
+        }
+
+        .login-link a:hover{
+
+            text-shadow:0 0 10px rgb(165, 37, 84);
+        }
+
+        /* Responsive */
+
+        @media(max-width:500px){
+
+            .register-box{
+                width:90%;
+                padding:30px;
+            }
+
+            .register-box h1{
+                font-size:32px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Background Video -->
+
+    <video autoplay muted loop class="bg-video">
+        <source src="Video1.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay -->
+
+    <div class="overlay"></div>
+
+    <!-- Register Form -->
+
+    <div class="register-box">
+
+        <h1>REGISTER</h1>
+
+        <form>
+
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" required>
+            </div>
+
+            <div class="input-box">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+
+            <button type="submit" class="btn">
+                Create Account
+            </button>
+
+            <div class="login-link">
+                Already have an account?
+                <a href="file:///D:/For%20Test/Login.html?">Login</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forgot Password</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+
+            height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            overflow:hidden;
+
+            background:#000;
+        }
+
+        /* Background Video */
+
+        .bg-video{
+            position:fixed;
+            top:0;
+            left:0;
+
+            width:100%;
+            height:100%;
+
+            object-fit:cover;
+
+            z-index:-2;
+        }
+
+        /* Overlay */
+
+        .overlay{
+            position:fixed;
+            top:0;
+            left:0;
+
+            width:100%;
+            height:100%;
+
+            background:rgba(0,0,0,0.6);
+
+            z-index:-1;
+        }
+
+        /* Forgot Password Box */
+
+        .forgot-box{
+
+            width:400px;
+
+            padding:40px;
+
+            border-radius:25px;
+
+            background:rgba(255,255,255,0.08);
+
+            border:1px solid rgba(255,255,255,0.2);
+
+            backdrop-filter:blur(15px);
+
+            text-align:center;
+
+            box-shadow:
+            0 0 20px rgba(0,255,255,0.3),
+            0 0 40px rgba(0,255,255,0.2);
+
+            animation:glow 3s infinite alternate;
+        }
+
+        @keyframes glow{
+
+            from{
+                box-shadow:
+                0 0 20px cyan,
+                0 0 40px cyan;
+            }
+
+            to{
+                box-shadow:
+                0 0 30px #00ffff,
+                0 0 60px #00ffff;
+            }
+        }
+
+        .forgot-box h1{
+
+            color:white;
+
+            font-size:36px;
+
+            margin-bottom:15px;
+
+            text-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+        }
+
+        .forgot-box p{
+
+            color:#ddd;
+
+            font-size:15px;
+
+            margin-bottom:25px;
+        }
+
+        /* Input */
+
+        .input-box{
+            margin-bottom:20px;
+        }
+
+        .input-box input{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            outline:none;
+
+            border-radius:12px;
+
+            background:rgba(255,255,255,0.08);
+
+            border:1px solid rgba(255,255,255,0.2);
+
+            color:white;
+
+            font-size:16px;
+
+            transition:0.4s;
+        }
+
+        .input-box input:focus{
+
+            border-color:cyan;
+
+            box-shadow:
+            0 0 10px cyan,
+            0 0 20px cyan;
+        }
+
+        .input-box input::placeholder{
+            color:#ddd;
+        }
+
+        /* Button */
+
+        .btn{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:linear-gradient(45deg, cyan, #00ffea);
+
+            color:black;
+
+            font-size:18px;
+
+            font-weight:600;
+
+            cursor:pointer;
+
+            transition:0.4s;
+        }
+
+        .btn:hover{
+
+            transform:scale(1.05);
+
+            box-shadow:
+            0 0 15px rgb(245, 96, 99),
+            0 0 30px rgb(247, 87, 138),
+            0 0 60px rgb(238, 107, 164);
+        }
+
+        /* Back Login */
+
+        .back-login{
+
+            margin-top:20px;
+
+            color:white;
+
+            font-size:15px;
+        }
+
+        .back-login a{
+
+            color:cyan;
+
+            text-decoration:none;
+
+            font-weight:600;
+        }
+
+        .back-login a:hover{
+
+            text-shadow:0 0 10px cyan;
+        }
+
+        /* Responsive */
+
+        @media(max-width:500px){
+
+            .forgot-box{
+                width:90%;
+                padding:30px;
+            }
+
+            .forgot-box h1{
+                font-size:30px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Background Video -->
+
+    <video autoplay muted loop class="bg-video">
+        <source src="j.mp4.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay -->
+
+    <div class="overlay"></div>
+
+    <!-- Forgot Password Form -->
+
+    <div class="forgot-box">
+
+        <h1>Forgot Password</h1>
+
+        <p>Enter your email to reset your password</p>
+
+        <form>
+
+            <div class="input-box">
+                <input type="email" placeholder="Enter Email Address" required>
+            </div>
+
+            <button type="submit" class="btn">
+                Reset Password
+            </button>
+
+            <div class="back-login">
+                Back to
+                <a href="file:///D:/For%20Test/Login.html?">Login</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
