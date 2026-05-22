@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>3D Rotating Card Marquee</title>
 
     <!-- Google Font -->
@@ -17,68 +18,47 @@
         }
 
         body{
-
             font-family:'Poppins',sans-serif;
-
             height:100vh;
-
             overflow:hidden;
-
             display:flex;
             justify-content:center;
             align-items:center;
-
             background:#000;
         }
 
         /* Background Video */
 
         .bg-video{
-
             position:fixed;
-
             top:0;
             left:0;
-
             width:100%;
             height:100%;
-
             object-fit:cover;
-
             z-index:-2;
         }
 
-        /* Dark Overlay */
+        /* Overlay */
 
         .overlay{
-
             position:fixed;
-
             top:0;
             left:0;
-
             width:100%;
             height:100%;
-
             background:rgba(0,0,0,0.55);
-
             z-index:-1;
         }
 
-        /* Main Title */
+        /* Title */
 
         h1{
-
             position:absolute;
-
             top:30px;
-
             color:white;
-
             font-size:55px;
-
             letter-spacing:4px;
-
             text-transform:uppercase;
 
             text-shadow:
@@ -90,24 +70,18 @@
         /* 3D Scene */
 
         .scene{
-
             width:300px;
             height:400px;
-
             perspective:1200px;
         }
 
-        /* Rotating Carousel */
+        /* Carousel */
 
         .carousel{
-
             width:100%;
             height:100%;
-
             position:relative;
-
             transform-style:preserve-3d;
-
             animation:rotate 20s infinite linear;
         }
 
@@ -116,7 +90,6 @@
         }
 
         @keyframes rotate{
-
             from{
                 transform:rotateY(0deg);
             }
@@ -129,7 +102,6 @@
         /* Cards */
 
         .card{
-
             position:absolute;
 
             width:260px;
@@ -157,7 +129,6 @@
         }
 
         .card:hover{
-
             transform:scale(1.05);
 
             box-shadow:
@@ -166,24 +137,18 @@
         }
 
         .card img{
-
             width:100%;
             height:220px;
-
             object-fit:cover;
         }
 
         .card-content{
-
             padding:20px;
-
             color:white;
-
             text-align:center;
         }
 
         .card-content h2{
-
             margin-bottom:10px;
 
             color:#ff4da6;
@@ -193,9 +158,7 @@
         }
 
         .card-content p{
-
             font-size:14px;
-
             color:#ddd;
         }
 
@@ -251,7 +214,7 @@
     <!-- Background Video -->
 
     <video autoplay muted loop class="bg-video">
-        <source src="eye.mp4" type="video/mp4">
+        <source src="assets/eye.mp4" type="video/mp4">
     </video>
 
     <!-- Overlay -->
@@ -271,7 +234,7 @@
             <!-- CARD 1 -->
 
             <div class="card"
-            onclick="window.location.href='file:///D:/For%20Test/Task 5.html'">
+            onclick="window.location.href='pages/Task5.html'">
 
                 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
 
@@ -288,7 +251,7 @@
             <!-- CARD 2 -->
 
             <div class="card"
-            onclick="window.location.href='file:///D:/For%20Test/Homework.html'">
+            onclick="window.location.href='pages/Homework.html'">
 
                 <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop">
 
@@ -305,7 +268,7 @@
             <!-- CARD 3 -->
 
             <div class="card"
-            onclick="window.location.href='file:///D:/For%20Test/index.html'">
+            onclick="window.location.href='index.html'">
 
                 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
 
@@ -322,7 +285,7 @@
             <!-- CARD 4 -->
 
             <div class="card"
-            onclick="window.location.href='file:///D:/For%20Test/Task 3.html'">
+            onclick="window.location.href='pages/Task3.html'">
 
                 <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop">
 
@@ -339,7 +302,7 @@
             <!-- CARD 5 -->
 
             <div class="card"
-            onclick="window.location.href='file:///D:/For%20Test/Task 4.html'">
+            onclick="window.location.href='pages/Task4.html'">
 
                 <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop">
 
@@ -356,7 +319,7 @@
             <!-- CARD 6 -->
 
             <div class="card"
-            onclick="window.location.href='file:///D:/For%20Test/Live.html'">
+            onclick="window.location.href='pages/Live.html'">
 
                 <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop">
 
@@ -373,7 +336,7 @@
             <!-- CARD 7 -->
 
             <div class="card"
-            onclick="window.location.href='file:///D:/For%20Test/Program.html'">
+            onclick="window.location.href='pages/Program.html'">
 
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop">
 
